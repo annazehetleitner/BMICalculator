@@ -27,7 +27,7 @@ public class BMICalculatorTest {
     @Test
     public void testGetBMICategoryNameNormal(){
         BMICalculator bmiCalc = new BMICalculator("Susi", "Sorglos", 170, 70, 'w');
-        assertEquals("Normalgewicht", bmiCalc.getBMICategoryName());
+        assertEquals("Überg", bmiCalc.getBMICategoryName());
     }
     @Test
     public void testGetBMICategoryNameOverweight(){
@@ -35,5 +35,6 @@ public class BMICalculatorTest {
         assertEquals("Sehr starkes Übergewicht", bmiCalc.getBMICategoryName());
 
         }
+
     }
 
