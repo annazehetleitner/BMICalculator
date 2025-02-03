@@ -23,6 +23,17 @@ public class BMICalculatorTest {
     public void testCalculateBMIWithHighWeight(){
         BMICalculator bmiCalc = new BMICalculator("Max", "Mustermann", 180, 120, 'm');
         assertEquals(37.04, bmiCalc.calculateBMI(), 0.01);
-
     }
-}
+    @Test
+    public void testGetBMICategoryNameNormal(){
+        BMICalculator bmiCalc = new BMICalculator("Susi", "Sorglos", 170, 70, 'w');
+        assertEquals("Normalgewicht", bmiCalc.getBMICategoryName());
+    }
+    @Test
+    public void testGetBMICategoryNameOverweight(){
+        BMICalculator bmiCalc = new BMICalculator("Max", "Mustermann", 180, 120, 'm');
+        assertEquals("Sehr starkes Übergewicht", bmiCalc.getBMICategoryName());
+
+        }
+    }
+
